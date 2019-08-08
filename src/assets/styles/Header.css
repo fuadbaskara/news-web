@@ -1,0 +1,91 @@
+.avatar {
+  border-radius: 50%;
+  width: 50px;
+}
+
+div,
+p,
+a,
+h5 {
+  color: #063852;
+}
+
+a {
+  color: #063852;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #063852;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.job-nav-container {
+  margin-top: -9px;
+  margin-left: 54px;
+}
+
+.job-icon {
+  width: 30px;
+  display: inline-block;
+  margin: -7px 0px 0px 0px;
+}
+
+.user-menu {
+  position: absolute;
+  will-change: transform;
+  top: 47px !important;
+  left: -110px !important;
+  transform: translate3d(0px, 32px, 0px);
+}
+
+.user-menu:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  bottom: 60.45px;
+  left: 100px;
+  background-image: url("../images/triangle.svg");
+  z-index: 9999;
+  margin-left: 1.5rem;
+  margin-top: 7px;
+}
+
+.user-menu p {
+  margin: 0px;
+}
+
+.menu-item {
+  margin: 10px;
+}
+
+.header-container__outer {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 10;
+  background-color: white;
+}
+
+.header-login {
+  width: 75%;
+}
+
+.header-container__inner {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.header-container__inner img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-container__inner h5 {
+  display: inline-block;
+  margin: 20px 10px 0px 14px;
+}

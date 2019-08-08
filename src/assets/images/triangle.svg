@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="10px" viewBox="0 0 20 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dev" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Big-dropdown-5" transform="translate(-68.000000, -8.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#CCCCCC">
+            <g id="Chevron" transform="translate(77.500000, 9.000000) rotate(180.000000) translate(-77.500000, -9.000000) translate(66.000000, 0.000000)">
+                <rect id="Rectangle-4" transform="translate(11.000000, 0.000000) rotate(45.000000) translate(-11.000000, -0.000000) " x="4.5" y="-6.5" width="13" height="13"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

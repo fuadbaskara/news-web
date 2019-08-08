@@ -1,0 +1,90 @@
+$font-url: "../fonts/Montserrat/" !default;
+
+@font-face {
+  font-family: "Montserrat R";
+  src: url($font-url+"Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat B";
+  src: url($font-url+"Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat L";
+  src: url($font-url+"Montserrat-Light.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat R", "Montserrat B", "Montserrat L", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+strong,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat B", sans-serif !important;
+}
+
+span {
+  font-family: "Montserrat L", sans-serif !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.btn {
+  padding: 6px 8px 6px 8px !important;
+}
+.btn--orange {
+  background-color: #f0810f !important;
+  border-color: #f0810f !important;
+}
+.btn--orange:hover {
+  background-color: #da760f !important;
+  border-color: #da760f !important;
+}
+.btn--orange:active {
+  background-color: #da760f !important;
+  border-color: #da760f !important;
+}
+.btn--orange:disabled {
+  cursor: not-allowed;
+  background-color: #ff9324 !important;
+  border-color: #ff9324 !important;
+}
+
+.btn--orange-bg-white {
+  color: #f0810f !important;
+  background-color: white !important;
+  border-color: #f0810f !important;
+}
+.btn--orange-bg-white:hover {
+  background-color: white !important;
+  border-color: #da760f !important;
+}
+.btn--orange-bg-white:active {
+  background-color: white !important;
+  border-color: #da760f !important;
+}
+.btn--orange-bg-white:disabled {
+  cursor: not-allowed;
+  background-color: rgba(158, 158, 158, 0.48) !important;
+  border-color: #ff9324 !important;
+}
+
+.content-middle {
+  margin: 20%;
+}
