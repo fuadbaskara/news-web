@@ -1,0 +1,42 @@
+.footer {
+  border-top: 2px solid;
+}
+.bottom-logo {
+  text-align: center;
+  padding: 30px 0;
+}
+.bottom-logo h1.logo {
+  font-size: 40px;
+  margin: 0;
+}
+
+.bottom-logo ul {
+  display: inline;
+}
+.bottom-logo li {
+  display: inline-block;
+  margin: 30px 4px 0 4px;
+}
+
+li {
+  line-height: 28px;
+  list-style: none;
+}
+
+.bottom-logo .footer__links li a {
+  border: 1px solid #333;
+  transform: rotate(45deg);
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: 0 2px;
+}
+
+.bottom-logo .footer__links li a i {
+  transform: rotate(-45deg);
+}
+
+.coppyright {
+  text-align: center;
+  padding: 0 0 30px 0;
+}

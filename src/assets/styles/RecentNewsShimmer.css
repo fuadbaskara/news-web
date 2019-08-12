@@ -1,0 +1,74 @@
+.recent-news-shimmer .shimmer {
+  padding: 12px;
+  height: 110px;
+  margin: 4rem auto;
+  background-color: #fff;
+}
+.recent-news-shimmer .shimmer__background {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeHolderShimmer;
+  -webkit-animation-timing-function: linear;
+  background: #f6f7f9;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f9 0%,
+    #e9ebee 20%,
+    #f6f7f9 40%,
+    #f6f7f9 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  height: 104px;
+  position: relative;
+}
+
+.shimmer__background div {
+  background: #fff;
+  height: 6px;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.recent-news-shimmer div.a {
+  height: 97px;
+  left: 91px;
+  right: auto;
+  top: 0;
+  width: 21px;
+}
+
+.recent-news-shimmer div.b {
+  height: 8px;
+  left: 91px;
+  top: 0;
+}
+
+.recent-news-shimmer div.c {
+  left: 476px;
+  top: 8px;
+}
+
+.recent-news-shimmer div.d {
+  height: 22px;
+  left: 91px;
+  top: 26px;
+}
+
+.recent-news-shimmer div.e {
+  left: 100px;
+  top: 26px;
+}
+
+.recent-news-shimmer div.f {
+  height: 32px;
+  left: 91px;
+  top: 68px;
+}
+
+.recent-news-shimmer div.g {
+  height: 24px;
+  top: 96px;
+}

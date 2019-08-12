@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:900");
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* slider */
+.slider {
+  display: inline-block;
+  position: relative;
+}
+
+.slider__slide-list {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.slider__arrow {
+  position: absolute;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  transform: translateY(-50%);
+  font-size: 50px;
+  line-height: 1;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.9);
+  border-style: none;
+  border-radius: 50%;
+  border-width: 0 0 3px;
+  opacity: 0.8;
+}
+.slider__arrow:hover {
+  opacity: 1;
+}
+.slider__arrow:active {
+  border-width: 3px 0 0;
+}
+.slider__arrow::after {
+  position: relative;
+  top: -0.1em;
+}
+.slider__arrow_direction-left {
+  left: 5%;
+}
+.slider__arrow_direction-left::after {
+  content: "\2039";
+}
+.slider__arrow_direction-right {
+  right: 5%;
+}
+.slider__arrow_direction-right::after {
+  content: "\203a";
+}
+
+/* slide */
+.slide {
+  position: absolute;
+  top: 100%;
+  transition: right 0.8s;
+}
+.slide_incoming,
+.slide_outgoing {
+  top: 0%;
+}
+.slide_active {
+  position: relative;
+  right: 0;
+}
+.slide_prev {
+  right: 100%;
+}
+.slide_next {
+  right: -100%;
+}
+/* .slide__image-container {
+  max-width: 650px;
+  max-height: 366px;
+} */
+.slide__bg-image {
+  width: auto;
+  height: -webkit-fill-available;
+  max-height: 400px;
+  object-fit: fill;
+}
+.slide__overlay {
+  width: 100%;
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: #aaaaaa;
+  border-style: solid;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 2px;
+  border-width: 0 0 3px;
+}
+.slide__small-image,
+.slide__caption {
+  display: block;
+}
+.slide__caption {
+  text-align: center;
+  font-size: 14px;
+  padding: 0.5em 0.5em 0.7em;
+  text-transform: uppercase;
+  line-height: 1em;
+  padding: 40px 0;
+}
+@media (max-width: 768px) {
+  .slide__bg-image {
+    height: 315px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide__bg-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 425px) {
+  .slide__bg-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 375px) {
+  .slide__bg-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 320px) {
+  .slide__bg-image {
+    height: 200px;
+  }
+}

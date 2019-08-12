@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Serif", serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+strong,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "IBM Plex Serif", serif !important;
+}
+
+span {
+  font-family: "IBM Plex Serif", serif !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a {
+  background-color: transparent;
+}
+
+a:focus,
+a:hover,
+a.link-active {
+  color: #e5633f;
+  text-decoration: none;
+  outline: none;
+}
+
+strong {
+  font-weight: 500;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+
+figure {
+  margin-bottom: 15px;
+  max-width: 100%;
+  position: relative;
+}
+
+.padding-top {
+  padding-top: 170px;
+}
+@media (max-width: 425px) {
+  .padding-top {
+    padding-top: 215px;
+  }
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.content-middle {
+  margin: 20%;
+}

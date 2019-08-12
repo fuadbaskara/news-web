@@ -1,0 +1,74 @@
+.popular-news-shimmer .shimmer {
+  padding: 12px;
+  height: 110px;
+  margin: 4rem auto;
+  background-color: #fff;
+}
+.popular-news-shimmer .shimmer__background {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeHolderShimmer;
+  -webkit-animation-timing-function: linear;
+  background: #f6f7f9;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f9 0%,
+    #e9ebee 20%,
+    #f6f7f9 40%,
+    #f6f7f9 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  height: 104px;
+  position: relative;
+}
+
+.shimmer__background div {
+  background: #fff;
+  height: 6px;
+  right: 0;
+  position: absolute;
+  left: 0;
+}
+
+.popular-news-shimmer div.a {
+  height: 97px;
+  right: 91px;
+  left: auto;
+  top: 0;
+  width: 21px;
+}
+
+.popular-news-shimmer div.b {
+  height: 8px;
+  right: 91px;
+  top: 0;
+}
+
+.popular-news-shimmer div.c {
+  right: 476px;
+  top: 8px;
+}
+
+.popular-news-shimmer div.d {
+  height: 22px;
+  right: 91px;
+  top: 26px;
+}
+
+.popular-news-shimmer div.e {
+  right: 100px;
+  top: 26px;
+}
+
+.popular-news-shimmer div.f {
+  height: 32px;
+  right: 91px;
+  top: 68px;
+}
+
+.popular-news-shimmer div.g {
+  height: 24px;
+  top: 96px;
+}

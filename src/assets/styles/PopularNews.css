@@ -1,0 +1,148 @@
+.popular-news {
+  margin: 0 0 30px 0;
+}
+
+.popular-news__title-outer-wrapper {
+  line-height: 1;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.popular-news__title-inner-wrapper {
+  font-size: 16px;
+  position: relative;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.popular-news__title-inner-wrapper .popular-news__title {
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+.popular-news__title-inner-wrapper .popular-news__title::before {
+  background: #000 none repeat scroll 0 0;
+  border-radius: 50%;
+  content: "";
+  height: 8px;
+  left: 0;
+  margin-top: -4px;
+  position: absolute;
+  top: 50%;
+  width: 8px;
+}
+
+.popular-news__title-inner-wrapper::after {
+  background: #000 none repeat scroll 0 0;
+  bottom: 7px;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  left: 100%;
+  position: absolute;
+  width: 100vw;
+}
+
+.popular-news__article-wrapper .popular-news__article:first-child {
+  padding-top: 25px;
+}
+.popular-news__article {
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 50px 0;
+  position: relative;
+  min-height: 80px;
+}
+
+.popular-news__article .popular-news__article-index {
+  float: left;
+  font-size: 30px;
+}
+.vertical-align {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.popular-news__article .popular-news__article-title {
+  clear: none;
+  float: left;
+  left: 12%;
+  margin-left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  color: #888;
+}
+.popular-news__article-title {
+  line-height: 1.2;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a {
+  background-color: transparent;
+}
+
+a:focus,
+a:hover,
+.top_bar .social a:hover i,
+.post_meta span a:hover,
+.alith_post_content_big_caption a:hover,
+a.link-active,
+.sticky .alith_post_title a {
+  color: #e5633f;
+  text-decoration: none;
+  outline: none;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.meta p {
+  margin-bottom: 1rem;
+}
+
+.popular-news__article-title .meta .meta__item {
+  margin: 0 10px 0 0;
+}
+
+.popular-news__article-title .meta {
+  color: #888;
+  font-size: 12px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+figure {
+  margin-bottom: 15px;
+  max-width: 100%;
+  position: relative;
+}
+.popular-news__article-figure {
+  overflow: hidden;
+}
+.popular-news__article .popular-news__article-figure {
+  display: block;
+  float: right;
+  margin: 0;
+  position: relative;
+  width: 35%;
+}
+
+.popular-news__article-figure .popular-news__article-img {
+  vertical-align: middle;
+  border-style: none;
+  height: auto;
+  max-width: 100%;
+}
+@media (max-width: 990px) {
+  .popular-news__article {
+    padding: 75px 0;
+  }
+}
