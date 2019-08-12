@@ -15,7 +15,7 @@ class NavBar extends Component {
 
   render() {
     return (
-      <div className="col-12 col-md-12 navigation-bar">
+      <div className="col-12 col-med-12 navigation-bar">
         <span
           className="burger-menu navigation-bar__burger-menu"
           onClick={() =>

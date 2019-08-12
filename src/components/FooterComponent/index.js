@@ -6,7 +6,7 @@ class FooterComponent extends Component {
     return (
       <div className="container footer">
         <div className="row">
-          <div className="col-12 col-md-12 bottom-logo">
+          <div className="col-12 col-med-12 bottom-logo">
             <h1 className="logo">
               <a href="/">Q-News</a>
             </h1>
@@ -42,7 +42,7 @@ class FooterComponent extends Component {
               </ul>
             </div>
           </div>
-          <div className="col-12 col-md-12 coppyright">
+          <div className="col-12 col-med-12 coppyright">
             {" "}
             <p>
               All data provided by{" "}

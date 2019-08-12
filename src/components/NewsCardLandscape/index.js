@@ -8,7 +8,7 @@ class NewsCardLandscape extends Component {
       <div>
         {articles.map((news, index) => (
           <article className="row recent-news__article-wrapper" key={index}>
-            <div className="col-md-3">
+            <div className="col-med-3">
               <figure className="recent-news__figure">
                 <a href={news.url}>
                   <img
@@ -19,7 +19,7 @@ class NewsCardLandscape extends Component {
                 </a>
               </figure>
             </div>
-            <div className="col-md-9">
+            <div className="col-med-9">
               <h3 className="recent-news__title">
                 <a className="recent-news__link" href={news.url}>
                   {news.title}

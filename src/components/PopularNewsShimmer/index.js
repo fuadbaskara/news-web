@@ -5,7 +5,7 @@ class PopularNewsShimmer extends Component {
   render() {
     return (
       <div>
-        <div className="col-xs-12 col-sm-12 popular-news-shimmer">
+        <div className="col-small-12 popular-news-shimmer">
           <div className="shimmer">
             <article className="shimmer__background">
               <div className="a" />
@@ -17,7 +17,7 @@ class PopularNewsShimmer extends Component {
             </article>
           </div>
         </div>
-        <div className="col-xs-12 col-sm-12 popular-news-shimmer">
+        <div className="col-small-12 popular-news-shimmer">
           <div className="shimmer">
             <article className="shimmer__background">
               <div className="a" />
@@ -29,7 +29,7 @@ class PopularNewsShimmer extends Component {
             </article>
           </div>
         </div>
-        <div className="col-xs-12 col-sm-12 popular-news-shimmer">
+        <div className="col-small-12 popular-news-shimmer">
           <div className="shimmer">
             <article className="shimmer__background">
               <div className="a" />
@@ -41,7 +41,7 @@ class PopularNewsShimmer extends Component {
             </article>
           </div>
         </div>
-        <div className="col-xs-12 col-sm-12 popular-news-shimmer">
+        <div className="col-small-12 popular-news-shimmer">
           <div className="shimmer">
             <article className="shimmer__background">
               <div className="a" />
@@ -53,7 +53,7 @@ class PopularNewsShimmer extends Component {
             </article>
           </div>
         </div>
-        <div className="col-xs-12 col-sm-12 popular-news-shimmer">
+        <div className="col-small-12 popular-news-shimmer">
           <div className="shimmer">
             <article className="shimmer__background">
               <div className="a" />

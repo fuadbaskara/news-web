@@ -9,6 +9,9 @@
 .recent-news__article-wrapper {
   margin-bottom: 30px;
 }
+.recent-news__link {
+  font-size: 20px;
+}
 
 .recent-news__figure {
   overflow: hidden;

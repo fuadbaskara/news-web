@@ -37,7 +37,7 @@ class Header extends Component {
         <div className="header-container__outer container">
           <div className="top_bar margin-15">
             <div className="row">
-              <div className="col-md-6 col-sm-12 time">
+              <div className="col-med-6 col-small-12 time">
                 <a href="/">
                   <span className="top-logo">Q-NEWS</span>
                 </a>
@@ -46,7 +46,7 @@ class Header extends Component {
                   {moment(new Date()).format("LL")}
                 </span>
               </div>
-              <div className="col-md-6 col-sm-12 social">
+              <div className="col-med-6 col-small-12 social">
                 <input
                   type="search"
                   placeholder="Search …"
@@ -69,7 +69,7 @@ class Header extends Component {
           </div>
         </div>
         <div className="container p-0">
-          <div className="col-sm-12 col-md-12 p-0">
+          <div className="col-small-12 col-med-12 p-0">
             <div className="newsTicker">
               <p>
                 {headlines &&

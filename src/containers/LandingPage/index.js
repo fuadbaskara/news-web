@@ -20,7 +20,7 @@ class LandingPage extends Component {
     super();
     this.state = {
       headlines: {},
-      totalPage: 0,
+      totalPage: 10,
       loading: false
     };
   }
@@ -107,7 +107,7 @@ class LandingPage extends Component {
       <section className="landing-page">
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-8 recent-post">
+            <div className="col-small-12 col-med-8 recent-post">
               <SectionTitle title={"Top Headlines"} />
               {headlines && headlines.length > 1 ? (
                 <div className="slider-section">
@@ -130,11 +130,13 @@ class LandingPage extends Component {
                 previousLabel={"Prev"}
                 nextLabel={"Next"}
                 breakLabel={"..."}
-                pageCount={this.state.totalPage}
+                pageCount={
+                  this.state.totalPage > 0 ? this.state.totalPage : 100
+                }
                 forcePage={
                   this.props.getCurrentPageHome > 0
                     ? this.props.getCurrentPageHome - 1
-                    : 1
+                    : 1 - 1
                 }
                 marginPagesDisplayed={1}
                 pageRangeDisplayed={5}
@@ -145,7 +147,7 @@ class LandingPage extends Component {
               />
             </div>
             <aside
-              className="col-xs-12 col-sm-12 col-md-4 sidebar"
+              className="col-small-12 col-med-4 sidebar"
               style={{
                 position: "relative",
                 overflow: "visible",

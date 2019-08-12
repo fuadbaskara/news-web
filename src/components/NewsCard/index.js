@@ -8,7 +8,7 @@ class NewsCard extends Component {
     return (
       <div className="row news-card">
         {articles.map((item, index) => (
-          <article className="col-md-6 section_margin" key={index}>
+          <article className="col-med-6 section_margin" key={index}>
             <div className="wrap">
               <figure className="news-card__figure">
                 <a className="news-card__img-link" href={item.url}>
