@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import { Button } from "reactstrap";
 import "../../assets/styles/Error.css";
 
 class ErrorPage extends Component {
@@ -26,10 +25,6 @@ class ErrorPage extends Component {
             : "Page Not Found"
       }
     });
-  }
-
-  componentWillUnmount() {
-    localStorage.removeItem("error");
   }
 
   render() {

@@ -2,11 +2,6 @@ import React, { Component } from "react";
 import "../../assets/styles/SectionTitle.css";
 
 class SectionTitle extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-
   render() {
     const { title } = this.props;
     return (

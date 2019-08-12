@@ -4,14 +4,6 @@ import SideNewsCard from "../SideNewsCard";
 // import moment from "moment";
 
 class PopularNews extends Component {
-  constructor() {
-    super();
-    this.state = {
-      showUserMenu: false,
-      dropdownOpen: false
-    };
-  }
-
   render() {
     const { articles } = this.props.popularNews;
     return (

@@ -2,14 +2,6 @@ import React, { Component } from "react";
 import "../../assets/styles/CardNewsShimmer.css";
 
 class CardNewsShimmer extends Component {
-  constructor() {
-    super();
-    this.state = {
-      showUserMenu: false,
-      dropdownOpen: false
-    };
-  }
-
   render() {
     return (
       <div className="row" style={{ marginBottom: "30px" }}>

@@ -8,7 +8,6 @@ import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "./redux/store";
 
 import "./assets/styles/layouting.css";
-// import "./assets/styles/ionicons/_ionicons.scss";
 import Routes from "./routes";
 import history from "./history";
 

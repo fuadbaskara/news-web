@@ -2,14 +2,6 @@ import React, { Component } from "react";
 import "../../assets/styles/PopularNewsShimmer.css";
 
 class PopularNewsShimmer extends Component {
-  constructor() {
-    super();
-    this.state = {
-      showUserMenu: false,
-      dropdownOpen: false
-    };
-  }
-
   render() {
     return (
       <div>

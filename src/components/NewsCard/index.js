@@ -3,11 +3,6 @@ import "../../assets/styles/NewsCard.css";
 import moment from "moment";
 
 class NewsCard extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-
   render() {
     const { articles } = this.props.searchResult;
     return (

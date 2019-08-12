@@ -2,11 +2,6 @@ import React, { Component } from "react";
 import moment from "moment";
 
 class NewsCardLandscape extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-
   render() {
     const { articles } = this.props;
     return (

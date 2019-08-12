@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import "../../assets/styles/NavBar.css";
-// import jobIcon from "../../assets/images/job_icon.png";
-// import avatar from "../../assets/images/img_avatar.png";
-// import { statusCookie, removeCookie } from "../../helpers/helper.js";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import * as selectors from "../../redux/selectors/mainSelector";
@@ -12,7 +9,6 @@ class NavBar extends Component {
   constructor() {
     super();
     this.state = {
-      showUserMenu: false,
       dropdownOpen: false
     };
   }
@@ -20,20 +16,17 @@ class NavBar extends Component {
   render() {
     return (
       <div className="col-12 col-md-12 navigation-bar">
-        <a
-          href="#"
-          role="button"
+        <span
           className="burger-menu navigation-bar__burger-menu"
-          style={{ outline: "none" }}
           onClick={() =>
             this.setState({
               dropdownOpen: !this.state.dropdownOpen
             })
           }
         >
-          <span className="navigation-bar__text">MENU</span>
+          <span className="navigation-bar__text">MENU&nbsp;</span>
           <i className="fa fa-bars" />
-        </a>
+        </span>
         <div
           className={
             this.state.dropdownOpen === true

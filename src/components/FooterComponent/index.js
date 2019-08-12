@@ -2,11 +2,6 @@ import React, { Component } from "react";
 import "../../assets/styles/FooterComponent.css";
 
 class FooterComponent extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-
   render() {
     return (
       <div className="container footer">

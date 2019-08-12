@@ -10,14 +10,14 @@ export default class Routes extends Component {
   render() {
     return (
       <div>
-        <Header />
+        {this.props.location.pathname !== "/error" && <Header />}
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route path="/error" component={ErrorPage} />
           <Route path="/search" component={Search} />
           <Route render={() => <Redirect to="/error" />} />
         </Switch>
-        <Footer />
+        {this.props.location.pathname !== "/error" && <Footer />}
       </div>
     );
   }

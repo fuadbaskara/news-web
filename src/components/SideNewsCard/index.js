@@ -1,13 +1,7 @@
 import React, { Component } from "react";
-// import "../../assets/styles/NewsCard.css";
 import moment from "moment";
 
 class SideNewsCard extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-
   render() {
     const { articles } = this.props;
     return (
