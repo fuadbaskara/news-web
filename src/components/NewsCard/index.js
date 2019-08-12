@@ -10,7 +10,6 @@ class NewsCard extends Component {
 
   render() {
     const { articles } = this.props.searchResult;
-    console.log(articles[0].urlToImage);
     return (
       <div className="row news-card">
         {articles.map((item, index) => (

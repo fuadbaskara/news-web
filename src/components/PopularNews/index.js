@@ -14,7 +14,6 @@ class PopularNews extends Component {
 
   render() {
     const { articles } = this.props.popularNews;
-    console.log("prop: ", articles);
     return (
       <div className="popular-news">
         <div className="popular-news__title-outer-wrapper">

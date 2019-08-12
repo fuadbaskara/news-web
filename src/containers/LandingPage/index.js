@@ -71,7 +71,6 @@ class LandingPage extends Component {
 
   scrollToTop = () => {
     let scrollTo = document.getElementsByClassName("recent-news")[0].offsetTop;
-    console.log(scrollTo);
     window.scrollTo({ top: scrollTo, behavior: "smooth" });
   };
 
@@ -104,10 +103,6 @@ class LandingPage extends Component {
     let featuredPopularNews = this.props.getFeaturedPopularNews
       ? this.props.getFeaturedPopularNews
       : null;
-    // console.log("true headlines: ", headlines);
-    // console.log("true news: ", news);
-    // console.log("true popular news: ", popularNews);
-    // console.log("featuredPopularNews: ", featuredPopularNews);
     return (
       <section className="landing-page">
         <div className="container">

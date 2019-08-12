@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../../assets/styles/Header.css";
 import "../../assets/styles/BreakingNews.css";
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
 import moment from "moment";
 import { createStructuredSelector } from "reselect";
 import * as selectors from "../../redux/selectors/mainSelector";
@@ -19,27 +18,31 @@ class Header extends Component {
     };
   }
 
-  submitSearch(e) {
-    if (e.key === "Enter") {
-      console.log(this.context);
-      // this.context.router.history.push("/?q=" + this.state.keyword);
-      // this.context.router.history.replace("/search?q=" + this.state.keyword);
+  submitSearch = e => {
+    if (e.key === "Enter" && this.state.keyword !== "") {
       window.location = "/search?q=" + this.state.keyword;
     }
-  }
+  };
+
+  searchOnClick = () => {
+    if (this.state.keyword !== "") {
+      window.location = "/search?q=" + this.state.keyword;
+    }
+  };
 
   render() {
     let headlines = this.props.getTopHeadlines.slides
       ? this.props.getTopHeadlines.slides
       : null;
-    console.log(headlines);
     return (
       <div className="header-container">
         <div className="header-container__outer container">
           <div className="top_bar margin-15">
             <div className="row">
               <div className="col-md-6 col-sm-12 time">
-                <span className="top-logo">Q-NEWS</span>
+                <a href="/">
+                  <span className="top-logo">Q-NEWS</span>
+                </a>
                 <i className="fa fa-clock-o" />
                 <span className="current-date">
                   {moment(new Date()).format("LL")}
@@ -56,7 +59,10 @@ class Header extends Component {
                   }
                   onKeyUp={event => this.submitSearch(event)}
                 />
-                <div className="top-search">
+                <div
+                  className="top-search"
+                  onClick={() => this.searchOnClick()}
+                >
                   <i className="fa fa-search" />
                   <span>SEARCH</span>
                 </div>
@@ -87,10 +93,6 @@ class Header extends Component {
     );
   }
 }
-
-Header.contextTypes = {
-  router: PropTypes.object.isRequired
-};
 
 const mapStateToProps = createStructuredSelector({
   getTopHeadlines: selectors.getTopHeadlines()

@@ -30,7 +30,6 @@ class Search extends Component {
     this.setState({ query: query, loading: true });
     let currentPage =
       this.props.getCurrentPageSearch > 0 ? this.props.getCurrentPageSearch : 1;
-    console.log("didmount current page: ", currentPage);
     let queryHeadlines = {
       category: "technology",
       page: currentPage
@@ -106,7 +105,6 @@ class Search extends Component {
     let featuredPopularNews = this.props.getFeaturedPopularNews
       ? this.props.getFeaturedPopularNews
       : null;
-    console.log("currentPage: ", this.props.getCurrentPageSearch);
     return (
       <section className="padding-top">
         <div className="container">

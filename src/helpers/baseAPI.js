@@ -1,7 +1,6 @@
 import axios from "axios";
 import querystring from "qs";
 import config from "../config.js";
-// import * as Cookies from "js-cookie";
 
 const { BASE_URL, API_KEY } = config;
 
@@ -22,40 +21,6 @@ api.interceptors.request.use(
     return request;
   },
   function(error) {
-    // let isLoginPage = window.location.pathname === "/login";
-    // if (
-    //   !isLoginPage &&
-    //   error.response.data.code === 400 &&
-    //   error.response.data.message !== "Token expired" &&
-    //   error.response.data.message !== "Code is required"
-    // ) {
-    //   let errorData = {
-    //     code: error.response.data.code,
-    //     message: error.response.data.message[0]
-    //   };
-    //   localStorage.setItem("error", JSON.stringify(errorData));
-    //   window.location = "/error";
-    // } else if (
-    //   !isLoginPage &&
-    //   error.response.data.message[0] !== "Token expired" &&
-    //   error.response.data.message[0] !== "Code is required"
-    // ) {
-    //   if (!error.response.data.code || !error.response.data.message[0]) {
-    //     let errorData = {
-    //       code: error.response.status,
-    //       message: error.response.statusText
-    //     };
-    //     localStorage.setItem("error", JSON.stringify(errorData));
-    //     window.location = "/error";
-    //   } else {
-    //     let errorData = {
-    //       code: null,
-    //       message: "Oops! Something Wrong Happen"
-    //     };
-    //     localStorage.setItem("error", JSON.stringify(errorData));
-    //     window.location = "/error";
-    //   }
-    // }
     return Promise.reject(error);
   }
 );
@@ -67,40 +32,6 @@ api.interceptors.response.use(
     return response;
   },
   function(error) {
-    // let isLoginPage = window.location.pathname === "/login";
-    // if (
-    //   !isLoginPage &&
-    //   error.response.data.code === 400 &&
-    //   error.response.data.message[0] !== "Token expired" &&
-    //   error.response.data.message[0] !== "Code is required"
-    // ) {
-    //   let errorData = {
-    //     code: error.response.data.code,
-    //     message: error.response.data.message[0]
-    //   };
-    //   localStorage.setItem("error", JSON.stringify(errorData));
-    //   window.location = "/error";
-    // } else if (
-    //   !isLoginPage &&
-    //   error.response.data.message[0] !== "Token expired" &&
-    //   error.response.data.message[0] !== "Code is required"
-    // ) {
-    //   if (!error.response.data.code || !error.response.data.message[0]) {
-    //     let errorData = {
-    //       code: error.response.status,
-    //       message: error.response.statusText
-    //     };
-    //     localStorage.setItem("error", JSON.stringify(errorData));
-    //     window.location = "/error";
-    //   } else {
-    //     let errorData = {
-    //       code: null,
-    //       message: "Oops! Something Wrong Happen"
-    //     };
-    //     localStorage.setItem("error", JSON.stringify(errorData));
-    //     window.location = "/error";
-    //   }
-    // }
     return Promise.reject(error);
   }
 );

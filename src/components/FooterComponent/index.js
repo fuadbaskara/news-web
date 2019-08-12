@@ -18,17 +18,29 @@ class FooterComponent extends Component {
             <div className="footer__links">
               <ul>
                 <li className="linkedin">
-                  <a href="https://www.linkedin.com/in/fuad-baskara-b07ab7164/">
+                  <a
+                    href="https://www.linkedin.com/in/fuad-baskara-b07ab7164/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
                     <i className="fa fa-linkedin" />
                   </a>
                 </li>
                 <li className="github">
-                  <a href="https://github.com/fuadbaskara">
+                  <a
+                    href="https://github.com/fuadbaskara"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
                     <i className="fa fa-github" />
                   </a>
                 </li>
                 <li className="facebook">
-                  <a href="https://www.facebook.com/fuad.baskara">
+                  <a
+                    href="https://www.facebook.com/fuad.baskara"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
                     <i className="fa fa-facebook" />
                   </a>
                 </li>

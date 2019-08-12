@@ -57,10 +57,7 @@ export function setNews(query) {
 export function searchNews(query) {
   return async dispatch => {
     try {
-      // let regExp = /\.(jpe?g|png|gif|bmp)$/i
-      console.log(query);
       const response = await api.getEverything(query);
-      console.log("response searchNews", response);
       let news = response;
       dispatch({
         type: constants.SET_SEARCH_NEWS,
@@ -77,9 +74,7 @@ export function searchNews(query) {
 export function setPopularNews(query) {
   return async dispatch => {
     try {
-      // let regExp = /\.(jpe?g|png|gif|bmp)$/i
       const response = await api.getEverything(query);
-      console.log("response popular", response);
       let popularNews = response;
       dispatch({
         type: constants.SET_POPULAR_NEWS,
@@ -129,7 +124,6 @@ export function setFeaturedPopularNews(query) {
       // let regExp = /\.(jpe?g|png|gif|bmp)$/i
       const response = await api.getEverything(query);
       let featuredPopularNews = response;
-      console.log("response featured", response);
       dispatch({
         type: constants.SET_FEATURED_NEWS,
         payload: {
