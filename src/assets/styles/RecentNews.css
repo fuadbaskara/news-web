@@ -1,0 +1,52 @@
+.top_bar .social a:hover i,
+.post_meta span a:hover,
+.alith_post_content_big_caption a:hover {
+  color: #e5633f;
+  text-decoration: none;
+  outline: none;
+}
+
+.recent-news__article-wrapper {
+  margin-bottom: 30px;
+}
+
+.recent-news__figure {
+  overflow: hidden;
+}
+
+.recent-news__figure .recent-news__img {
+  vertical-align: middle;
+  border-style: none;
+  height: auto;
+  max-width: 100%;
+}
+
+.recent-news__title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.post_list_style_1 .post_meta {
+  margin-bottom: 20px;
+}
+.post_meta {
+  font-size: 80%;
+  font-weight: 300;
+}
+.post_meta span {
+  color: #888;
+  margin: 0 20px 0 0;
+}
+
+.post_meta span a {
+  color: #888;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.post_meta .meta_categories,
+.post_meta .meta_date,
+.post_meta_date {
+  text-transform: uppercase;
+}

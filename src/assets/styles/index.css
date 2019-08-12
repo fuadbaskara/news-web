@@ -1,24 +1,9 @@
-$font-url: "../fonts/Montserrat/" !default;
-
-@font-face {
-  font-family: "Montserrat R";
-  src: url($font-url+"Montserrat-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Montserrat B";
-  src: url($font-url+"Montserrat-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Montserrat L";
-  src: url($font-url+"Montserrat-Light.ttf") format("truetype");
-}
-
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 body {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat R", "Montserrat B", "Montserrat L", sans-serif !important;
+  font-family: "IBM Plex Serif", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -29,11 +14,11 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Montserrat B", sans-serif !important;
+  font-family: "IBM Plex Serif", serif !important;
 }
 
 span {
-  font-family: "Montserrat L", sans-serif !important;
+  font-family: "IBM Plex Serif", serif !important;
 }
 
 code {
@@ -45,44 +30,86 @@ code {
   cursor: pointer;
 }
 
-.btn {
-  padding: 6px 8px 6px 8px !important;
-}
-.btn--orange {
-  background-color: #f0810f !important;
-  border-color: #f0810f !important;
-}
-.btn--orange:hover {
-  background-color: #da760f !important;
-  border-color: #da760f !important;
-}
-.btn--orange:active {
-  background-color: #da760f !important;
-  border-color: #da760f !important;
-}
-.btn--orange:disabled {
-  cursor: not-allowed;
-  background-color: #ff9324 !important;
-  border-color: #ff9324 !important;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.btn--orange-bg-white {
-  color: #f0810f !important;
-  background-color: white !important;
-  border-color: #f0810f !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
 }
-.btn--orange-bg-white:hover {
-  background-color: white !important;
-  border-color: #da760f !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
-.btn--orange-bg-white:active {
-  background-color: white !important;
-  border-color: #da760f !important;
+
+a {
+  color: #000000;
+  text-decoration: none;
 }
-.btn--orange-bg-white:disabled {
-  cursor: not-allowed;
-  background-color: rgba(158, 158, 158, 0.48) !important;
-  border-color: #ff9324 !important;
+a {
+  background-color: transparent;
+}
+
+a:focus,
+a:hover,
+a.link-active {
+  color: #e5633f;
+  text-decoration: none;
+  outline: none;
+}
+
+strong {
+  font-weight: 500;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+
+figure {
+  margin-bottom: 15px;
+  max-width: 100%;
+  position: relative;
+}
+
+.padding-top {
+  padding-top: 170px;
+}
+@media (max-width: 425px) {
+  .padding-top {
+    padding-top: 215px;
+  }
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
 }
 
 .content-middle {

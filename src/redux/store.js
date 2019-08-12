@@ -3,12 +3,10 @@ import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/es/storage";
 import thunkMiddleware from "redux-thunk";
 
-import candidateListReducer from "./reducers/candidateListReducer.js";
-import alertReducer from "./reducers/alertReducer.js";
+import mainReducer from "./reducers/mainReducer.js";
 
 const rootReducer = {
-  candidateListReducer: candidateListReducer,
-  alertReducer: alertReducer
+  mainReducer: mainReducer
 };
 
 const Immutable = require("immutable");

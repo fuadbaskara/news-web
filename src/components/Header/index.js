@@ -1,143 +1,103 @@
 import React, { Component } from "react";
 import "../../assets/styles/Header.css";
-import logo from "../../assets/images/logo.png";
-import jobIcon from "../../assets/images/job_icon.png";
-import avatar from "../../assets/images/img_avatar.png";
-// import Alerts from "../Alerts/index.js";
-// import { Dropdown, DropdownMenu, DropdownToggle } from "reactstrap";
-import { statusCookie, removeCookie } from "../../helpers/helper.js";
+import "../../assets/styles/BreakingNews.css";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import moment from "moment";
 import { createStructuredSelector } from "reselect";
-import * as selectors from "../../redux/selectors/candidateListSelector";
-import * as actions from "../../redux/actions/candidateListAction.js";
-import * as alertSelectors from "../../redux/selectors/alertSelector.js";
-import * as alertActions from "../../redux/actions/alertAction.js";
+import * as selectors from "../../redux/selectors/mainSelector";
+import * as actions from "../../redux/actions/mainAction.js";
+import NavBar from "../NavBar";
 
 class Header extends Component {
-  constructor() {
-    super();
+  constructor(props, context) {
+    super(props, context);
     this.state = {
       showUserMenu: false,
-      dropdownOpen: false
+      dropdownOpen: false,
+      keyword: ""
     };
   }
-  isLogin = false;
 
-  UNSAFE_componentWillMount() {
-    let path = window.location.pathname;
-    if (path === "/login" && statusCookie("connect") === false) {
-      this.isLogin = false;
-    } else if (statusCookie("connect") === true) {
-      this.isLogin = true;
-    } else this.isLogin = false;
-  }
-
-  UNSAFE_componentWillUpdate() {
-    let path = window.location.pathname;
-    if (path === "/login" && statusCookie("connect") === false) {
-      this.isLogin = false;
-    } else if (statusCookie("connect") === true) {
-      this.isLogin = true;
-    } else this.isLogin = false;
-  }
-
-  toggle = () => {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen
-    });
-  };
-
-  logOut = () => {
-    removeCookie("connect");
-    this.removeError()
-    this.props.setToInitialState();
-    window.location = "/login";
-  };
-
-  removeError = () => {
-    this.props.setAlert({
-      message: '',
-      type: ''
-    })
-    localStorage.removeItem('error')
+  submitSearch(e) {
+    if (e.key === "Enter") {
+      console.log(this.context);
+      // this.context.router.history.push("/?q=" + this.state.keyword);
+      // this.context.router.history.replace("/search?q=" + this.state.keyword);
+      window.location = "/search?q=" + this.state.keyword;
+    }
   }
 
   render() {
-    const { isLogin } = this;
-    let alertMessage = "";
-    let alertType = "";
-    if (this.props.getAlert && this.props.getAlert.get("alert")) {
-      alertMessage = this.props.getAlert.get("alert").get("message");
-      alertType = this.props.getAlert.get("alert").get("type");
-    }
+    let headlines = this.props.getTopHeadlines.slides
+      ? this.props.getTopHeadlines.slides
+      : null;
+    console.log(headlines);
     return (
-      <div className="header-container__outer">
-        {isLogin === true ? (
-          <div className="header-container__inner">
-            <div className="header-login d-flex justify-content-between">
-              <div className="d-flex justify-content-start">
-                <a href="/dashboard" onClick={() =>  this.removeError()}>
-                  <img className="header-logo" src={logo} alt="Qjobs" />
-                </a>
-                <div className="job-nav-container">
-                  <a href="/dashboard" onClick={() => this.removeError()}>
-                    <img className="job-icon" src={jobIcon} alt="job-logo" />
-                    <h5>
-                      <strong className="cursor-pointer">Jobs</strong>
-                    </h5>
-                  </a>
-                </div>
+      <div className="header-container">
+        <div className="header-container__outer container">
+          <div className="top_bar margin-15">
+            <div className="row">
+              <div className="col-md-6 col-sm-12 time">
+                <span className="top-logo">Q-NEWS</span>
+                <i className="fa fa-clock-o" />
+                <span className="current-date">
+                  {moment(new Date()).format("LL")}
+                </span>
               </div>
-              <div>
-                {/*<Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                  <DropdownToggle
-                    tag="span"
-                    onClick={this.toggle}
-                    data-toggle="dropdown"
-                    aria-expanded={this.state.dropdownOpen}
-                  >
-                    <img
-                      className="avatar cursor-pointer"
-                      src={avatar}
-                      alt="Avatar"
-                      onClick={() =>
-                        this.setState({
-                          showUserMenu: !this.state.showUserMenu
-                        })
-                      }
-                    />
-                  </DropdownToggle>
-                  <DropdownMenu className="user-menu">
-                    <div className="menu-item" onClick={() => this.logOut()}>
-                      <p className="cursor-pointer">Logout</p>
-                    </div>
-                  </DropdownMenu>
-                </Dropdown>*/}
+              <div className="col-md-6 col-sm-12 social">
+                <input
+                  type="search"
+                  placeholder="Search …"
+                  className="search-field"
+                  value={this.state.keyword}
+                  onChange={event =>
+                    this.setState({ keyword: event.target.value })
+                  }
+                  onKeyUp={event => this.submitSearch(event)}
+                />
+                <div className="top-search">
+                  <i className="fa fa-search" />
+                  <span>SEARCH</span>
+                </div>
               </div>
             </div>
           </div>
-        ) : (
-          <div className="header-container__inner">
-            <a href="/" onClick={() =>  this.removeError()}>
-              <img className="header-logo" src={logo} alt="Qjobs" />
-            </a>
+        </div>
+        <div className="container p-0">
+          <div className="col-sm-12 col-md-12 p-0">
+            <div className="newsTicker">
+              <p>
+                {headlines &&
+                  headlines.length > 1 &&
+                  headlines.map((item, index) => (
+                    <a href={item.url} key={index}>
+                      <span className="date">
+                        {moment(item.publishedAt).format("LL")}
+                      </span>
+                      <span className="story">{item.hero}</span>
+                    </a>
+                  ))}
+              </p>
+            </div>
+            <NavBar />
           </div>
-        )}
-      {/*alertMessage && <Alerts message={alertMessage} type={alertType} />*/}
+        </div>
       </div>
     );
   }
 }
 
+Header.contextTypes = {
+  router: PropTypes.object.isRequired
+};
+
 const mapStateToProps = createStructuredSelector({
-  getInitialState: selectors.selectCandidateList(),
-  getPageBottom: selectors.selectCandidateList(),
-  getAlert: alertSelectors.selectAlert()
+  getTopHeadlines: selectors.getTopHeadlines()
 });
 
 const mapDispatchToProps = dispatch => ({
-  setToInitialState: () => dispatch(actions.setToInitialState()),
-  setAlert: (data) => dispatch(alertActions.setAlert(data))
+  setToInitialState: () => dispatch(actions.setToInitialState())
 });
 
 export default connect(

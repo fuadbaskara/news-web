@@ -57,7 +57,6 @@
     rgba(170, 170, 170, 1) 51%,
     rgba(170, 170, 170, 1) 100%
   );
-  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3b3b3', endColorstr='#aaaaaa', GradientType=0 ); */
 }
 .error-code:not(:last-of-type) {
   margin-right: 15px;
