@@ -8,16 +8,18 @@ const SliderSlide = props => {
   );
   return (
     <li className={className}>
-      <div className="slide__image-container">
-        <img
-          className="slide__bg-image"
-          src={props.image}
-          alt="../../assets/styles/placeholder-img.png"
-        />
-      </div>
-      <div className="slide__overlay">
-        <span className="slide__caption">{props.hero}</span>
-      </div>
+      <a href={props.url} rel="noopener noreferrer" target="_blank">
+        <div className="slide__image-container">
+          <img
+            className="slide__bg-image"
+            src={props.image}
+            alt="../../assets/styles/placeholder-img.png"
+          />
+        </div>
+        <div className="slide__overlay">
+          <span className="slide__caption">{props.hero}</span>
+        </div>
+      </a>
     </li>
   );
 };
