@@ -70,16 +70,20 @@ class Header extends Component {
         </div>
         <div className="container p-0">
           <div className="col-small-12 col-med-12 p-0">
-            <div className="newsTicker">
-              <p>
+            <div className="breaking-news">
+              <p className="breaking-news__list">
                 {headlines &&
                   headlines.length > 1 &&
                   headlines.map((item, index) => (
-                    <a href={item.url} key={index}>
-                      <span className="date">
+                    <a
+                      className="breaking-news__item"
+                      href={item.url}
+                      key={index}
+                    >
+                      <span className="breaking-news__date">
                         {moment(item.publishedAt).format("LL")}
                       </span>
-                      <span className="story">{item.hero}</span>
+                      <span className="breaking-news__story">{item.hero}</span>
                     </a>
                   ))}
               </p>
